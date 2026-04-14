@@ -471,6 +471,17 @@
     footer a { color: var(--accent); text-decoration: none; font-weight: 500; }
     footer a:hover { text-decoration: underline; }
 
+    /* --- NEW RESUME STYLING --- */
+.resume-card { border: 1px solid var(--border); border-radius: 8px; margin-bottom: 12px; overflow: hidden; background: #fff; } [cite: 81]
+.resume-header { padding: 20px; cursor: pointer; display: flex; justify-content: space-between; align-items: center; background: #fafafa; transition: background 0.2s; } [cite: 82]
+.resume-header:hover { background: #f4f4f4; } [cite: 83]
+.resume-content { max-height: 0; overflow: hidden; transition: max-height 0.3s ease-out; padding: 0 20px; } [cite: 84]
+.resume-card.active .resume-content { max-height: 800px; padding: 20px; border-top: 1px solid var(--border); } [cite: 85]
+.resume-content ul { list-style: disc; margin-left: 20px; font-size: 0.95rem; color: var(--secondary); } [cite: 86]
+.resume-content li { margin-bottom: 8px; } [cite: 88]
+.btn-view-all { display: inline-block; margin-top: 24px; padding: 12px 24px; border: 1px solid var(--accent); border-radius: 6px; text-decoration: none; color: var(--accent); font-weight: 600; font-size: 0.9rem; transition: background 0.2s; } [cite: 89, 90]
+.btn-view-all:hover { background: var(--accent); color: #fff; } [cite: 91]
+
     /* ————————————————————————————
        RESPONSIVE
     ———————————————————————————— */
@@ -764,6 +775,68 @@
   </div>
 </section>
 
+  <section id="resume">
+    <h2>Resume</h2>
+    <div class="resume-container">
+        <div class="resume-card">
+            <div class="resume-header" onclick="toggleResume(this)">
+                <div><strong>Business Operations Manager</strong><br><small>KKM Leadership · May 2025 - Nov 2025</small></div>
+                <span>+</span>
+            </div>
+            <div class="resume-content">
+                <ul>
+                    <li>Managed project kickoffs to define scope, milestones, and cross-team timelines.</li> [cite: 235, 236]
+                    <li>Built ClickUp-based workflows and automations to improve team visibility.</li> [cite: 237]
+                    <li>Maintained operational SOPs and training resources for scalable delivery.</li> [cite: 239]
+                </ul>
+            </div>
+        </div>
+
+        <div class="resume-card">
+            <div class="resume-header" onclick="toggleResume(this)">
+                <div><strong>Onboarding & Implementation Specialist</strong><br><small>RunLoyal Pet Software · Jan 2024 - May 2025</small></div>
+                <span>+</span>
+            </div>
+            <div class="resume-content">
+                <ul>
+                    <li>Owned end-to-end operations for client implementations (5/5 CSAT).</li> [cite: 253]
+                    <li>Cut average program timelines by ~30% through process standardization.</li> [cite: 253]
+                    <li>Coordinated Sales, Product, and Support to keep programs on track.</li> [cite: 254]
+                </ul>
+            </div>
+        </div>
+
+        <div class="resume-card">
+            <div class="resume-header" onclick="toggleResume(this)">
+                <div><strong>Project Management & Operations Consultant</strong><br><small>Freelance · March 2023 - Jan 2025</small></div>
+                <span>+</span>
+            </div>
+            <div class="resume-content">
+                <ul>
+                    <li>Audited broken business processes and built operational replacements for scaling clients.</li> [cite: 265, 266]
+                    <li>Implemented ClickUp systems to improve team visibility and efficiency.</li> [cite: 267]
+                    <li>Developed SOPs, process docs, and training materials used long-term by client teams.</li> [cite: 268]
+                </ul>
+            </div>
+        </div>
+
+        <div class="resume-card">
+            <div class="resume-header" onclick="toggleResume(this)">
+                <div><strong>Marketing Project Manager</strong><br><small>Tatango · July 2021 - March 2023</small></div>
+                <span>+</span>
+            </div>
+            <div class="resume-content">
+                <ul>
+                    <li>Coordinated 12+ external vendors and internal teams across campaigns.</li> [cite: 281]
+                    <li>Built centralized PM workflows to reduce missed deadlines.</li> [cite: 282]
+                    <li>Served as operational hub across Marketing, Product, and client teams.</li> [cite: 283]
+                </ul>
+            </div>
+        </div>
+    </div>
+    <a href="Kierstin_Geary_Resume.pdf" target="_blank" class="btn-view-all">View All Experience (PDF)</a>
+</section>
+
 
 <!-- ═══════════════════════════════════════
      SKILLS / TOOLKIT
@@ -826,6 +899,12 @@
     </p>
   </div>
 </footer>
+
+  <script>
+    function toggleResume(el) {
+        el.parentElement.classList.toggle('active'); [cite: 310]
+    }
+</script>
 
 </body>
 </html>
